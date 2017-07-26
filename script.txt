@@ -1,0 +1,106 @@
+INSERT INTO role (role_id, role_descrition) VALUES ('1', 'Admin') ;
+INSERT INTO role (role_id, role_descrition) VALUES ('2', 'Seller');
+INSERT INTO role (role_id, role_descrition) VALUES ('3', 'Buyer');
+
+INSERT INTO master_table (master_table_id, iec_code_number, company_name, email_id, first_name, gst_number, is_verified, last_name, middle_name, mobile_number, pan_number, password, user_name, website_url, role_id) VALUES ('1', '123asd123', 'Abc test', 'test@gmail.com', 'test', '1234ghj123', '1', 'demo', 'middle name', '1234567890', '456qwe456', 'test@123', 'test', 'test.com', '2') ;
+INSERT INTO master_table (master_table_id, iec_code_number, company_name, email_id, first_name, gst_number, is_verified, last_name, middle_name, mobile_number, pan_number, password, user_name, website_url, role_id) VALUES ('2', '123456asd', 'XYZ Pvt Ltd', 'xyz@yahoo.com', 'demo', '789qwe789', '1', 'demo12', NULL, '9874561320', '12345fgd1', 'demo@123', 'demo', 'demo.com', '2');
+INSERT INTO master_table (master_table_id, iec_code_number, company_name, email_id, first_name, gst_number, is_verified, last_name, middle_name, mobile_number, pan_number, password, user_name, website_url, role_id) VALUES ('3', '465g785', 'C Company', 'asd@asd.com', 'Ashok', '456789gg', '0', 'Sharma', NULL, '78945612314', '13asdq52', 'ashok@123', 'ashok', 'ashok@sharma.com', '3');
+
+INSERT INTO membership_type (membership_type_id, membership_type_description, membership_type_name) VALUES ('1', 'Highest paid member', 'Platinum');
+INSERT INTO membership_type (membership_type_id, membership_type_description, membership_type_name) VALUES ('2', '2nd Highest Membership Type', 'Gold');
+INSERT INTO membership_type (membership_type_id, membership_type_description, membership_type_name) VALUES ('3', 'Lowest Type of paid Membership', 'Silver');
+INSERT INTO membership_type (membership_type_id, membership_type_description, membership_type_name) VALUES ('4', 'Free member', 'Free');
+
+INSERT INTO payment_method (payment_method_id, description, payment_name) VALUES ('1', NULL, 'Paypal');
+INSERT INTO payment_method (payment_method_id, description, payment_name) VALUES  ('2', NULL, 'T/T');
+
+INSERT INTO country_lookup (country_lookup_id, country_name, extension, ico_field) VALUES ('1', 'India', '+91', 'IN');
+INSERT INTO country_lookup (country_lookup_id, country_name, extension, ico_field) VALUES('2', 'United States Of America', '+0', 'US');
+
+INSERT INTO state_lookup (state_lookup_id, state_name, country_lookup_id) VALUES ('1', 'Gujarat', '1') ;
+INSERT INTO state_lookup (state_lookup_id, state_name, country_lookup_id) VALUES  ('2', 'Punjab', '2');
+INSERT INTO state_lookup (state_lookup_id, state_name, country_lookup_id) VALUES ('3', 'New York', '2');
+
+INSERT INTO address_details (address_details_id, address_line1, address_line2, address_type, city, pincode, country_lookup_id, master_table_id, state_lookup_id) VALUES ('1', 'asd', 'asd', 'Office', 'Rajkot', '360001', '1', '1', '1') ;
+INSERT INTO address_details (address_details_id, address_line1, address_line2, address_type, city, pincode, country_lookup_id, master_table_id, state_lookup_id) VALUES ('2', 'hjg', 'ghjgjh', 'Home', 'Chandigarh', '400069', '1', '2', '2');
+
+INSERT INTO attachment_type_of_image (attachment_type_of_image_id, attachment_description) VALUES ('1', 'User Profile Image');
+
+INSERT INTO image (image_id, image_filepath, attachment_type_of_image_id, master_table_id) VALUES ('1', 'E:\\Globozor\\Offer Letter', '1', '1');
+
+INSERT INTO seller_description (seller_description_id, description_about_company, establishment, maximum_capacity, membership_start_date, number_of_employees, port, turnover, master_table_id, membership_type_id) VALUES ('1', 'company description', '1999', '100', NULL, '20', 'Ankleshwar', '50 crore', '1', '4');
+INSERT INTO seller_description (seller_description_id, description_about_company, establishment, maximum_capacity, membership_start_date, number_of_employees, port, turnover, master_table_id, membership_type_id) VALUES ('2', 'about company', '1984', '1000', NULL, '50', 'Kandla', '75 crore', '2', '1');
+
+INSERT INTO category (category_id, category_name) VALUES ('1', 'Agriculture');
+
+INSERT INTO subcategory (subcategory_id, subcategory_name) VALUES ('1', 'Cereals');
+INSERT INTO subcategory (subcategory_id, subcategory_name) VALUES ('2', 'Grain') ;
+INSERT INTO subcategory (subcategory_id, subcategory_name) VALUES ('3', 'Organic Produce') ;
+INSERT INTO subcategory (subcategory_id, subcategory_name) VALUES ('4', 'Fruits');
+INSERT INTO subcategory (subcategory_id, subcategory_name) VALUES ('5', 'Vegetables');
+
+INSERT INTO product (product_id, product_description, product_name) VALUES ('1', 'this is description for product wheat', 'Wheat');
+INSERT INTO product (product_id, product_description, product_name) VALUES ('2', 'this is description for product rice', 'Rice') ;
+INSERT INTO product (product_id, product_description, product_name) VALUES ('3', 'this is description for product corn', 'Corn');
+INSERT INTO product (product_id, product_description, product_name) VALUES ('4', 'this is description for product apples', 'Apple');
+INSERT INTO product (product_id, product_description, product_name) VALUES ('5', 'this is description for product mango', 'Mango');
+INSERT INTO product (product_id, product_description, product_name) VALUES ('6', 'this is description for product grapes', 'Grapes');
+INSERT INTO product (product_id, product_description, product_name) VALUES ('7', 'this is description for product potato', 'Potato');
+INSERT INTO product (product_id, product_description, product_name) VALUES ('8', 'this is description for product onion', 'Onion');
+
+INSERT INTO subproduct (subproduct_id, subproduct_description, subproduct_name) VALUES ('1', 'Long Grain', 'White Rice') ;
+INSERT INTO subproduct (subproduct_id, subproduct_description, subproduct_name) VALUES ('2', 'Long Grain', 'Brown Rice');
+INSERT INTO subproduct (subproduct_id, subproduct_description, subproduct_name) VALUES ('3', 'Whole Grain', 'Wheat');
+INSERT INTO subproduct (subproduct_id, subproduct_description, subproduct_name) VALUES ('4', 'this is description for subproduct sweet corn', 'Sweet Corn');
+INSERT INTO subproduct (subproduct_id, subproduct_description, subproduct_name) VALUES  ('5', 'this is description for subproduct red apples', 'Red Apple');
+INSERT INTO subproduct (subproduct_id, subproduct_description, subproduct_name) VALUES ('6', 'this is description for subproduct green apples', 'Green Apple');
+INSERT INTO subproduct (subproduct_id, subproduct_description, subproduct_name) VALUES('7', 'this is description for subproduct organic onion', 'Organic Onion');
+INSERT INTO subproduct (subproduct_id, subproduct_description, subproduct_name) VALUES ('8', 'this is description for subproduct red onion', 'Red Onion');
+
+INSERT INTO category_subcategory (category_id, subcategory_id) VALUES ('1', '1') ;
+INSERT INTO category_subcategory (category_id, subcategory_id) VALUES ('1', '2');
+INSERT INTO category_subcategory (category_id, subcategory_id) VALUES ('1', '3');
+INSERT INTO category_subcategory (category_id, subcategory_id) VALUES ('1', '4');
+INSERT INTO category_subcategory (category_id, subcategory_id) VALUES ('1', '5');
+
+INSERT INTO subcategory_product ( subcategory_id,product_id) VALUES ('1', '1');
+INSERT INTO subcategory_product ( subcategory_id,product_id) VALUES ('1', '2');
+INSERT INTO subcategory_product ( subcategory_id,product_id) VALUES ('1', '3');
+INSERT INTO subcategory_product ( subcategory_id,product_id) VALUES ('2', '1');
+INSERT INTO subcategory_product ( subcategory_id,product_id) VALUES ('2', '2');
+INSERT INTO subcategory_product ( subcategory_id,product_id) VALUES ('2', '3');
+INSERT INTO subcategory_product ( subcategory_id,product_id) VALUES ('4', '4');
+INSERT INTO subcategory_product ( subcategory_id,product_id) VALUES ('4', '5');
+INSERT INTO subcategory_product ( subcategory_id,product_id) VALUES('4', '6');
+INSERT INTO subcategory_product ( subcategory_id,product_id) VALUES('5', '7');
+INSERT INTO subcategory_product ( subcategory_id,product_id) VALUES('5', '8');
+
+INSERT INTO product_subproduct (product_id, subproduct_id) VALUES ('2', '1');
+INSERT INTO product_subproduct (product_id, subproduct_id) VALUES ('2', '2') ;
+INSERT INTO product_subproduct (product_id, subproduct_id) VALUES ('1', '3');
+INSERT INTO product_subproduct (product_id, subproduct_id) VALUES ('3', '4');
+INSERT INTO product_subproduct (product_id, subproduct_id) VALUES ('4', '5');
+INSERT INTO product_subproduct (product_id, subproduct_id) VALUES ('4', '6');
+INSERT INTO product_subproduct (product_id, subproduct_id) VALUES ('8', '7');
+INSERT INTO product_subproduct (product_id, subproduct_id) VALUES ('8', '8');
+
+INSERT INTO seller_product (seller_product_id, is_verified, minimum_quantity, product_certification, product_cultivation_type, product_maturity, product_place_of_origin, product_shape, product_size, product_weight, seller_product_description, seller_product_name, unit_price, master_table_id, subproduct_id) VALUES ('1', '1', '20', NULL, NULL, 'Mature', 'India', 'long', NULL, '20 gms', NULL, 'White Rice', '100', '1', '1');
+INSERT INTO seller_product (seller_product_id, is_verified, minimum_quantity, product_certification, product_cultivation_type, product_maturity, product_place_of_origin, product_shape, product_size, product_weight, seller_product_description, seller_product_name, unit_price, master_table_id, subproduct_id) VALUES ('2', '1', '10', NULL, NULL, 'Semi mature', 'Chandigarh', 'Round', NULL, '10', 'Description', 'White Rice', '25', '2', '1');
+INSERT INTO seller_product (seller_product_id, is_verified, minimum_quantity, product_certification, product_cultivation_type, product_maturity, product_place_of_origin, product_shape, product_size, product_weight, seller_product_description, seller_product_name, unit_price, master_table_id, subproduct_id) VALUES('3', '1', '100', 'iso certified', NULL, NULL, 'India', NULL, NULL, NULL, 'Product Description', 'Brown Rice', '75', '1', '2');
+
+INSERT INTO seller_product_image (seller_product_image_id, seller_product_id, filepath) VALUES ('1', '1', '103.207.45.26:201/db/sellerProduct/1WhiteRice1test.jpg');
+INSERT INTO seller_product_image (seller_product_image_id, seller_product_id, filepath) VALUES ('2', '1', '103.207.45.26:201/db/sellerProduct/2WhiteRice1test.jpg');
+INSERT INTO seller_product_image (seller_product_image_id, seller_product_id, filepath) VALUES ('3', '2', '103.207.45.26:201/db/sellerProduct/3WhiteRice2demo.jpg');
+INSERT INTO seller_product_image (seller_product_image_id, seller_product_id, filepath) VALUES ('4', '3', '103.207.45.26:201/db/sellerProduct/4BrownRice1test.jpg');
+INSERT INTO seller_product_image (seller_product_image_id, seller_product_id, filepath) VALUES ('5', '3', '103.207.45.26:201/db/sellerProduct/1WhiteRice1test.jpg');
+INSERT INTO seller_product_image (seller_product_image_id, seller_product_id, filepath) VALUES ('6', '4', '103.207.45.26:201/db/sellerProduct/6RedApple4girjesh.jpg');
+INSERT INTO seller_product_image (seller_product_image_id, seller_product_id, filepath) VALUES ('7', '4', '103.207.45.26:201/db/sellerProduct/7WhiteOnion4girjesh.jpg');
+INSERT INTO seller_product_image (seller_product_image_id, seller_product_id, filepath) VALUES ('8', '4', '103.207.45.26:201/db/sellerProduct/8BabyCorn4girjesh.jpg');
+
+INSERT INTO master_table (master_table_id, user_name, email_id, mobile_number, password, first_name, middle_name, last_name, company_name, website_url, pan_number, iec_code_number, gst_number, is_verified, role_id) VALUES ('4', 'girjesh', 'girjesh@asd.com', '70154232410', 'girjesh123', 'girjesh', 'g', 'soni', 'soni sons ltd', 'girjesh.com', '85738232374872', '27634726472fg2', 'y7trytyg23232', '1', '2');
+
+INSERT INTO seller_description (seller_description_id, master_table_id, description_about_company, establishment, maximum_capacity, turnover, port, number_of_employees, membership_type_id, membership_start_date) VALUES ('3', '4', 'Soni enterprise ', '1999', '1000', '50 crores', 'Vishakapatnam', '20', '2', '01-08-2017');
+
+INSERT INTO seller_product (seller_product_id, subproduct_id, master_table_id, seller_product_name, seller_product_description, minimum_quantity, unit_price, product_maturity, product_certification, product_weight, product_size, product_place_of_origin, product_shape, product_cultivation_type, is_verified, priority) VALUES ('4', '5', '4', 'Himalayan Red Apple', 'Tasty red apples', '500', '50', 'Fully mature', 'certified by govt of India', '0.5 kg', 'grown', 'Himachal Pradesh', 'round', 'Fresh', '1', '0');
+INSERT INTO seller_product (seller_product_id, subproduct_id, master_table_id, seller_product_name, seller_product_description, minimum_quantity, unit_price, product_maturity, product_certification, product_weight, product_size, product_place_of_origin, product_shape, product_cultivation_type, is_verified, priority) VALUES ('5', '7', '4', 'White Organic Onion', 'Organic Onion', '200', '20', '90%', 'Iso certified', '0.2 kg', 'unknown', 'BIHAR', NULL, 'organically grown', '1', NULL);
+INSERT INTO seller_product (seller_product_id, subproduct_id, master_table_id, seller_product_name, seller_product_description, minimum_quantity, unit_price, product_maturity, product_certification, product_weight, product_size, product_place_of_origin, product_shape, product_cultivation_type, is_verified, priority) VALUES ('6', '4', '4', 'Baby Corn', 'small sweet baby corn', '10', '15', '80%', 'no', '800 gms', 'long', 'unknown', NULL, NULL, '0', NULL);
